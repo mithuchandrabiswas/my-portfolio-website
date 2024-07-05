@@ -7,6 +7,12 @@
     <title> Personal Portfolio Website </title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("vGKBcY0QpcPSTn8l6"); // Replace 'YOUR_USER_ID' with your EmailJS user ID
+        })();
+    </script>
     <!-- Switcher Style link  -->
     <link rel="stylesheet" href="./extra-css/color-1.css" class="alternate-style" title="color-1">
     <link rel="stylesheet" href="./extra-css/color-2.css" class="alternate-style" title="color-2" disabled>
@@ -48,7 +54,8 @@
                         <div class="home-info padding-15">
                             <h3 class="hello"> Hello, my name is <span class="name"> Mithu Chandra Biswas </span></h3>
                             <h3 class="my-profession">I'm a <span class="typing"> React Developer </span></h3>
-                            <p style="text-align: justify;"> As a skilled React developer, I bring expertise in a wide range of technologies
+                            <p style="text-align: justify;"> As a skilled React developer, I bring expertise in a wide
+                                range of technologies
                                 including React, MongoDB, Express.js, Node.js, and Firebase. My proficiency extends to
                                 front-end development with HTML, CSS, Tailwind, and UI component libraries like DaisyUI.
                                 Additionally, I have experience with Tanstack Query for efficient data fetching and
@@ -436,7 +443,8 @@
                         <div style="height: 1500px;" class="portfolio-item">
                             <div style="padding: 20px;height: 1500px;" class="portfolio-item-inner shadow-dark">
                                 <div class="portfolio-img">
-                                    <img height="250px" src="https://i.ibb.co/PjL09vn/Screenshot-2024-07-06-022123.png" alt="">
+                                    <img height="250px" src="https://i.ibb.co/PjL09vn/Screenshot-2024-07-06-022123.png"
+                                        alt="">
                                 </div>
                                 <h1>ArtistryHub</h1>
                                 <p>ArtistryHub is an Art & Craft Store website specializing in the Painting and Drawing
@@ -493,7 +501,8 @@
                         <div style="height: 1500px;" class="portfolio-item">
                             <div style="padding: 20px;height: 1500px;" class="portfolio-item-inner shadow-dark">
                                 <div class="portfolio-img">
-                                    <img height="250px" src="https://i.ibb.co/vkWVVXk/Screenshot-2024-07-06-022259.png" alt="">
+                                    <img height="250px" src="https://i.ibb.co/vkWVVXk/Screenshot-2024-07-06-022259.png"
+                                        alt="">
                                 </div>
                                 <h1>UnityVolunteer</h1>
                                 <p>UnityVolunteer is a user-friendly platform for volunteer management, where users can
@@ -601,42 +610,41 @@
                     <!-- Contact Form Start -->
                     <div class="row">
                         <div class="contact-form padding-15">
-                            <div class="row">
-                                <div class="form-item col-6 padding-15">
-                                    <div class="form-group">
-                                        <input type="text" name="" id="" class="form-control"
-                                            placeholder="type your name">
+                            <form id="contact-form">
+                                <div class="row">
+                                    <div class="form-item col-6 padding-15">
+                                        <div class="form-group">
+                                            <input type="text" name="name" id="name" class="form-control" placeholder="Type your name" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-item col-6 padding-15">
+                                        <div class="form-group">
+                                            <input type="email" name="email" id="email" class="form-control" placeholder="Type your email" required>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="form-item col-6 padding-15">
-                                    <div class="form-group">
-                                        <input type="email" name="" id="" class="form-control"
-                                            placeholder="type your email">
+                                <div class="row">
+                                    <div class="form-item col-12 padding-15">
+                                        <div class="form-group">
+                                            <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject" required>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-item col-12 padding-15">
-                                    <div class="form-group">
-                                        <input type="text" name="" id="" class="form-control" placeholder="subject">
+                                <div class="row">
+                                    <div class="form-item col-12 padding-15">
+                                        <div class="form-group">
+                                            <textarea name="message" id="message" class="form-control" cols="30" rows="10" placeholder="Type your message here" required></textarea>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-item col-12 padding-15">
-                                    <div class="form-group">
-                                        <textarea name="" id="" class="form-control" cols="30" rows="10"
-                                            placeholder="type your message here"></textarea>
+                                <div class="row">
+                                    <div class="form-item col-12 padding-15">
+                                        <div class="form-group">
+                                            <button type="submit" class="btn">Send Message</button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-item col-12 padding-15">
-                                    <div class="form-group">
-                                        <button type="submit" class="btn"> Send Message </button>
-                                    </div>
-                                </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                     <!-- Contact Form End -->
