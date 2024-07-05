@@ -19,3 +19,15 @@ for (let i = 0; i < totalNavList; i++) {
         this.classList.add("active");
     })
 }
+
+// Emailjs
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm('mithubiswasinfo', 'template_oha5688', this)
+        .then(function() {
+            alert('Message sent successfully!');
+        }, function(error) {
+            alert('Failed to send message, please try again.');
+        });
+});
